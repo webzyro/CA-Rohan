@@ -10,10 +10,12 @@
 body {
   font-family: "Plus Jakarta Sans", serif;
 }
-
 :root {
   --primary-bg: #333333;
   --hover-color: #8d6e63;
+  --primary-color: #ff5e14;
+  --primary-rgb: 255, 94, 20;
+  --primary-dark: #e54d0e;
 }
 
 a {
@@ -421,8 +423,200 @@ h6 {
   color: var(--hover-color);
 }
 
+/* Contact Page Styles */
+
+.contact-info-box {
+  background: var(--primary-bg);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.contact-info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-info-box i {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-control {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
+}
+
+.map-container {
+  min-height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  min-height: 450px;
+}
+
+/* Contact Form Button Hover Effect */
+.contact-form .carousel-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Contact Info Box Icon Animation */
+.contact-info-box i {
+  transition: transform 0.3s ease;
+}
+
+.contact-info-box:hover i {
+  transform: scale(1.2);
+}
+
+/* Form Input Placeholder Styles */
+.contact-form ::placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Custom Scrollbar for Textarea */
+.contact-form textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contact-form textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Service Page Styles */
+.service-card {
+  background: var(--primary-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.service-list li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: grey;
+}
+
+.service-list li:before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.service-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-link:hover {
+  color: var(--primary-dark);
+}
+
+.why-choose-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.why-choose-points h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .card-section {
     margin-top: 0;
+  }
+
+  .breadcrumb-section {
+    padding: 50px 0;
+  }
+
+  .contact-info-box {
+    margin-bottom: 1.5rem;
+  }
+
+  .map-container {
+    margin-top: 2rem;
+    min-height: 300px;
+  }
+
+  .map-container iframe {
+    min-height: 300px;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .why-choose-points {
+    margin-top: 2rem;
   }
 }
