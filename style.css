@@ -396,6 +396,75 @@ h6 {
   text-align: center;
 }
 
+/* Team Section Styles */
+.team-member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.member-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.member-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.member-info h4 {
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.member-social a {
+  color: var(--primary-color);
+  margin: 0 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.member-social a:hover {
+  color: var(--primary-dark);
+}
+
+/* Owl Carousel Custom Navigation */
+.team-carousel .owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  background: var(--primary-color) !important;
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.team-carousel .owl-nav button.owl-prev {
+  left: -50px;
+}
+
+.team-carousel .owl-nav button.owl-next {
+  right: -50px;
+}
+
+.team-carousel .owl-nav button:hover {
+  background: var(--primary-dark) !important;
+}
+
 /* Footer */
 #footer {
   background-image: url("/Img/footer-bg.jpg");
@@ -618,5 +687,21 @@ h6 {
 
   .why-choose-points {
     margin-top: 2rem;
+  }
+
+  .team-carousel .owl-nav {
+    display: none;
+  }
+
+  .hero-slider .owl-nav {
+    display: none;
+  }
+
+  .carousel-content h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
   }
 }
